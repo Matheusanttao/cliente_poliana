@@ -16,9 +16,9 @@ import { WhatsAppFloat } from './components/WhatsAppFloat'
 
 function App() {
   return (
-    <>
+    <div className="min-w-0 overflow-x-clip">
       <Header />
-      <main>
+      <main className="min-w-0">
         <Hero />
         <Highlights />
         <Services />
@@ -34,7 +34,7 @@ function App() {
       </main>
       <Footer />
       <WhatsAppFloat />
-    </>
+    </div>
   )
 }
 

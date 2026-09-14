@@ -20,13 +20,13 @@ const highlights = [
 
 export function Highlights() {
   return (
-    <section className="relative z-10 -mt-2 pb-4 sm:-mt-4" aria-label="Diferenciais">
+    <section className="relative z-10 overflow-x-clip py-2 sm:py-4" aria-label="Diferenciais">
       <div className="container-site">
-        <div className="grid gap-4 rounded-[1.75rem] bg-white/90 p-4 shadow-[var(--shadow-soft)] ring-1 ring-border/70 backdrop-blur sm:grid-cols-3 sm:gap-2 sm:p-5">
+        <div className="grid gap-3 rounded-[1.5rem] bg-white/90 p-3 shadow-[var(--shadow-soft)] ring-1 ring-border/70 backdrop-blur sm:grid-cols-3 sm:gap-2 sm:rounded-[1.75rem] sm:p-5">
           {highlights.map(({ title, text, Icon }) => (
             <article
               key={title}
-              className="flex gap-3 rounded-2xl px-3 py-4 sm:px-4"
+              className="flex min-w-0 gap-3 rounded-2xl px-2 py-3 sm:px-4 sm:py-4"
             >
               <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-surface text-primary">
                 <Icon className="h-5 w-5" />

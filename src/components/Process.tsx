@@ -40,7 +40,7 @@ export function Process() {
             href={whatsappUrl(siteConfig.messages.general)}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary w-fit shrink-0"
+            className="btn-primary w-full shrink-0 sm:w-fit"
           >
             Começar pelo WhatsApp
           </a>

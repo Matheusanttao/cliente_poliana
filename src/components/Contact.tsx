@@ -70,12 +70,12 @@ export function Contact() {
               </p>
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex w-full flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
                 href={whatsappUrl(siteConfig.messages.general)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary gap-2"
+                className="btn-primary w-full gap-2 sm:w-auto"
               >
                 <IconWhatsApp className="h-5 w-5" />
                 Agendar horário
@@ -84,24 +84,26 @@ export function Contact() {
                 href={whatsappUrl(siteConfig.messages.doubt)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-12 items-center rounded-full border border-border bg-background px-5 text-sm font-medium text-ink/80 transition-colors hover:border-primary/30 hover:text-primary"
+                className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-border bg-background px-5 text-sm font-medium text-ink/80 transition-colors hover:border-primary/30 hover:text-primary sm:w-auto"
               >
                 Tirar dúvida
               </a>
             </div>
           </div>
 
-          <div className="relative h-full min-h-[320px] overflow-hidden bg-[#1a1416] sm:min-h-[380px]">
+          <div className="relative aspect-[4/5] min-h-0 overflow-hidden bg-[#1a1416] sm:aspect-[5/4] lg:aspect-auto lg:h-full lg:min-h-[380px]">
             <img
-              src={siteConfig.images.hero}
-              alt="Poliana — atendimento com cílios e escovinhas rosadas"
+              src={siteConfig.images.hero.src}
+              alt={`${siteConfig.images.hero.model} — atendimento com cílios`}
               className="absolute inset-0 h-full w-full object-cover object-[70%_30%]"
               loading="lazy"
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/55 via-transparent to-transparent" />
-            <p className="font-script absolute right-5 bottom-5 z-10 max-w-[90%] text-right text-2xl leading-tight text-white drop-shadow-md sm:right-7 sm:bottom-7 sm:text-3xl">
-              Beleza com carinho
-            </p>
+            <div className="absolute right-4 bottom-4 z-10 text-right sm:right-7 sm:bottom-7">
+              <p className="font-script text-2xl leading-tight text-white drop-shadow-md sm:text-3xl">
+                Beleza com carinho
+              </p>
+            </div>
           </div>
         </div>
       </div>

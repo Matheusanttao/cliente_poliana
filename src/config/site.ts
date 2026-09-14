@@ -24,10 +24,23 @@ export const siteConfig = {
   instagram: '',
   appointmentNote: 'Atendimento com hora marcada',
   images: {
-    hero: heroImage,
-    heroOverlay,
-    gallery: [gallery1, gallery2, gallery3] as const,
-    spoolies: spooliesImage,
+    hero: {
+      src: heroImage,
+      model: 'Modelo',
+    },
+    heroOverlay: {
+      src: heroOverlay,
+      model: 'Modelo',
+    },
+    gallery: [
+      { src: gallery1, model: 'Volume Fox' },
+      { src: gallery2, model: 'Volume Boss gril' },
+      { src: gallery3, model: 'Volume Brasileiro' },
+    ],
+    spoolies: {
+      src: spooliesImage,
+      model: 'Modelo',
+    },
   },
   messages: {
     general:

@@ -10,20 +10,40 @@ const carePoints = [
 
 export function Pricing() {
   return (
-    <section id="valores" className="py-14 sm:py-16 lg:py-20">
-      <div className="container-site grid gap-6 lg:grid-cols-2 lg:items-stretch lg:gap-7">
-        {/* Tabela */}
-        <div className="flex h-full flex-col rounded-[1.75rem] bg-surface p-6 sm:p-8 lg:p-9">
+    <section id="valores" className="overflow-x-clip py-12 sm:py-16 lg:py-20">
+      <div className="container-site grid gap-5 lg:grid-cols-2 lg:items-stretch lg:gap-7">
+        <div className="flex min-w-0 flex-col rounded-[1.5rem] bg-surface p-5 sm:rounded-[1.75rem] sm:p-8 lg:p-9">
           <p className="eyebrow">Tabela</p>
-          <h2 className="section-title mt-3 text-[2rem] sm:text-[2.35rem]">
+          <h2 className="section-title mt-3">
             Serviços e <em className="italic text-primary">valores</em>
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-ink/65">
-            Toque no nome do serviço para abrir o WhatsApp já com a mensagem preenchida.
+            Toque no serviço para abrir o WhatsApp com a mensagem pronta.
           </p>
 
-          <div className="mt-6 flex-1 overflow-x-auto rounded-2xl bg-white p-4 shadow-sm ring-1 ring-border/40 sm:p-5">
-            <table className="w-full min-w-[300px] border-collapse text-left text-sm">
+          {/* Mobile: cards */}
+          <ul className="mt-6 space-y-3 sm:hidden">
+            {siteConfig.lashServices.map((service) => (
+              <li key={service.id}>
+                <a
+                  href={whatsappUrl(siteConfig.messages[service.messageKey])}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block rounded-2xl bg-white p-4 shadow-sm ring-1 ring-border/50"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <p className="font-medium text-ink">{service.name}</p>
+                    <p className="shrink-0 font-medium text-primary">{service.application}</p>
+                  </div>
+                  <p className="mt-2 text-xs text-muted">Manutenção: {service.maintenance}</p>
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          {/* Desktop/tablet: table */}
+          <div className="mt-6 hidden flex-1 overflow-x-auto rounded-2xl bg-white p-5 shadow-sm ring-1 ring-border/40 sm:block">
+            <table className="w-full border-collapse text-left text-sm">
               <thead>
                 <tr className="border-b border-border text-muted">
                   <th scope="col" className="pb-3 pr-2 font-medium">
@@ -48,10 +68,6 @@ export function Pricing() {
                         className="font-medium text-ink underline-offset-4 transition-colors hover:text-primary hover:underline"
                       >
                         {service.name}
-                        <span className="sr-only">
-                          {' '}
-                          — consultar {service.application} no WhatsApp
-                        </span>
                       </a>
                     </td>
                     <td className="py-3.5 pr-2 align-middle whitespace-nowrap font-medium text-primary">
@@ -75,10 +91,9 @@ export function Pricing() {
           </a>
         </div>
 
-        {/* Cuidado */}
-        <div className="flex h-full flex-col justify-center rounded-[1.75rem] bg-white p-6 shadow-[var(--shadow-soft)] ring-1 ring-border/60 sm:p-8 lg:p-9">
+        <div className="flex min-w-0 flex-col justify-center rounded-[1.5rem] bg-white p-5 shadow-[var(--shadow-soft)] ring-1 ring-border/60 sm:rounded-[1.75rem] sm:p-8 lg:p-9">
           <p className="eyebrow">Beleza também é autocuidado</p>
-          <h3 className="mt-3 font-serif text-[1.85rem] leading-tight text-ink sm:text-[2.05rem]">
+          <h3 className="mt-3 font-serif text-[1.7rem] leading-tight text-ink sm:text-[2.05rem]">
             Seu momento de <em className="italic text-primary">cuidado.</em>
           </h3>
           <p className="mt-3 text-sm leading-relaxed text-ink/65">
@@ -100,7 +115,7 @@ export function Pricing() {
             href={whatsappUrl(siteConfig.messages.general)}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full border border-border px-5 text-sm font-medium text-primary transition-colors hover:border-primary/40 hover:bg-surface"
+            className="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-full border border-border px-5 text-sm font-medium text-primary transition-colors hover:border-primary/40 hover:bg-surface sm:w-auto"
           >
             Quero agendar meu horário
           </a>

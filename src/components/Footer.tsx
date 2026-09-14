@@ -6,7 +6,7 @@ export function Footer() {
   const ig = instagramUrl()
 
   return (
-    <footer className="border-t border-border bg-surface/70 pt-12 pb-24 sm:pt-14 sm:pb-28">
+    <footer className="overflow-x-clip border-t border-border bg-surface/70 pt-12 pb-28 sm:pt-14 sm:pb-28">
       <div className="container-site grid gap-10 lg:grid-cols-[1.2fr_1fr_1fr]">
         <div>
           <p className="font-serif text-2xl tracking-[0.18em] text-primary">{siteConfig.brand.title}</p>

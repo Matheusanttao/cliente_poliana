@@ -29,6 +29,8 @@ export function Gallery() {
     }
   }, [active])
 
+  const activeItem = active !== null ? siteConfig.images.gallery[active] : null
+
   return (
     <section id="inspiracoes" className="section-band py-14 sm:py-16 lg:py-20">
       <div className="container-site">
@@ -51,24 +53,27 @@ export function Gallery() {
         </div>
 
         <ul className="mt-10 grid gap-5 sm:grid-cols-3">
-          {siteConfig.images.gallery.map((src, index) => (
-            <li key={src}>
+          {siteConfig.images.gallery.map((item, index) => (
+            <li key={item.src}>
               <button
                 type="button"
                 className="group relative block w-full overflow-hidden rounded-[1.35rem] shadow-[var(--shadow-card)] focus-visible:outline-offset-4"
                 onClick={() => setActive(index)}
-                aria-label={`Ampliar foto de inspiração ${index + 1}`}
+                aria-label={`Ampliar foto de ${item.model}`}
               >
                 <img
-                  src={src}
-                  alt={`Inspiração de olhar ${index + 1} — trabalho de cílios`}
+                  src={item.src}
+                  alt={`Inspiração de olhar — ${item.model}`}
                   className={`aspect-[3/4] w-full object-cover transition-transform duration-500 group-hover:scale-[1.04] ${galleryPositions[index]}`}
                   loading="lazy"
                   width={740}
                   height={1200}
                 />
-                <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/55 to-transparent px-4 pt-10 pb-4 text-left text-sm text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  Toque para ampliar
+                <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/65 to-transparent px-4 pt-12 pb-4 text-left">
+                  <span className="block font-serif text-lg text-white">{item.model}</span>
+                  <span className="mt-0.5 block text-xs text-white/80 sm:opacity-0 sm:transition-opacity sm:duration-300 sm:group-hover:opacity-100">
+                    Toque para ampliar
+                  </span>
                 </span>
               </button>
             </li>
@@ -76,7 +81,7 @@ export function Gallery() {
         </ul>
       </div>
 
-      {active !== null && (
+      {activeItem && active !== null && (
         <div
           className="fixed inset-0 z-[60] flex items-center justify-center bg-ink/70 p-4"
           role="dialog"
@@ -90,7 +95,7 @@ export function Gallery() {
           >
             <div className="flex items-center justify-between border-b border-border px-4 py-3">
               <h3 id={titleId} className="font-serif text-lg">
-                Inspiração {active + 1}
+                {activeItem.model}
               </h3>
               <button
                 ref={closeRef}
@@ -103,8 +108,8 @@ export function Gallery() {
               </button>
             </div>
             <img
-              src={siteConfig.images.gallery[active]}
-              alt={`Inspiração de olhar ${active + 1} ampliada`}
+              src={activeItem.src}
+              alt={`Inspiração de olhar — ${activeItem.model}`}
               className={`max-h-[80vh] w-full object-contain ${galleryPositions[active]}`}
             />
           </div>
