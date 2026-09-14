@@ -57,9 +57,9 @@ export function Hero() {
               <img
                 src={hero.src}
                 alt={`${hero.model} — close-up com extensão de cílios`}
-                className="absolute inset-0 h-full w-full object-cover object-[center_42%]"
-                width={1460}
-                height={1075}
+                className="absolute inset-0 h-full w-full object-cover object-[center_28%]"
+                width={811}
+                height={1024}
                 fetchPriority="high"
               />
             </div>
@@ -74,9 +74,9 @@ export function Hero() {
               <img
                 src={hero.src}
                 alt={`${hero.model} — close-up com extensão de cílios`}
-                className="absolute inset-0 h-full w-full object-cover object-[center_42%]"
-                width={1460}
-                height={1075}
+                className="absolute inset-0 h-full w-full object-cover object-[center_28%]"
+                width={811}
+                height={1024}
               />
             </div>
 

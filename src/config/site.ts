@@ -122,7 +122,7 @@ export const siteConfig = {
     {
       question: 'O procedimento dói?',
       answer:
-        'Em geral é confortável. A Design Aganete trabalha com delicadeza e orienta você durante todo o atendimento.',
+        'Não. O procedimento é indolor. A Design Aganete trabalha com delicadeza e orienta você durante todo o atendimento.',
     },
     {
       question: 'Posso usar maquiagem depois?',
