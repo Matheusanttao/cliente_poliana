@@ -5,42 +5,72 @@ export function Techniques() {
   return (
     <section id="tecnicas" className="section-band py-14 sm:py-16 lg:py-20">
       <div className="container-site">
-        <div className="max-w-2xl">
-          <p className="eyebrow">Compare as opções</p>
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="eyebrow">Catálogo</p>
           <h2 className="section-title mt-3">
             Qual técnica combina com o seu <em className="italic text-primary">olhar?</em>
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-ink/65 sm:text-base">
-            Veja a diferença entre Fox, Volume Boss Girl e Volume Brasileiro e escolha o efeito que mais combina com você.
+            Veja o resultado de cada estilo, a descrição e os valores de aplicação e manutenção.
           </p>
         </div>
 
-        <div className="mt-10 grid gap-5 lg:grid-cols-3">
+        <ul className="mx-auto mt-10 flex max-w-3xl flex-col gap-8 sm:gap-10">
           {siteConfig.lashServices.map((service) => (
-            <article
-              key={service.id}
-              className="flex flex-col rounded-[1.5rem] bg-white p-6 shadow-[var(--shadow-soft)] ring-1 ring-border/60 sm:p-7"
-            >
-              <p className="text-xs tracking-[0.22em] text-primary/80 uppercase">{service.effect}</p>
-              <h3 className="mt-2 font-serif text-2xl text-ink sm:text-[1.7rem]">{service.name}</h3>
-              <p className="mt-1 text-sm font-medium text-primary">{service.application}</p>
-              <p className="mt-4 text-sm leading-relaxed text-ink/65">{service.details}</p>
-              <p className="mt-4 rounded-xl bg-surface/80 px-3 py-2.5 text-sm text-ink/75">
-                <span className="font-medium text-ink">Ideal para: </span>
-                {service.bestFor}
-              </p>
-              <a
-                href={whatsappUrl(siteConfig.messages[service.messageKey])}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary mt-6 inline-flex w-full gap-2"
-              >
-                <IconWhatsApp className="h-4 w-4" />
-                Quero esse estilo
-              </a>
-            </article>
+            <li key={service.id}>
+              <article className="grid grid-cols-[minmax(7.5rem,38%)_1fr] items-start gap-3 sm:grid-cols-[minmax(11rem,34%)_1fr] sm:gap-6">
+                <div className="overflow-hidden rounded-sm bg-surface shadow-[var(--shadow-soft)]">
+                  <img
+                    src={service.image}
+                    alt={`${service.name} — resultado de extensão de cílios`}
+                    className={`aspect-square w-full object-cover ${service.imagePosition}`}
+                    loading="lazy"
+                    width={640}
+                    height={640}
+                  />
+                </div>
+
+                <div className="flex min-w-0 flex-col">
+                  <h3 className="font-serif text-[1.05rem] leading-tight font-medium tracking-[0.04em] text-ink uppercase sm:text-2xl sm:tracking-[0.06em]">
+                    {service.name}
+                  </h3>
+                  <p className="mt-2 text-[0.72rem] leading-relaxed text-ink/65 sm:mt-3 sm:text-sm">
+                    {service.details}
+                  </p>
+
+                  <div className="mt-3 flex w-full max-w-[16rem] flex-col gap-1.5 sm:mt-4 sm:max-w-[18rem] sm:gap-2">
+                    <div className="flex items-center gap-3 text-[0.65rem] sm:text-xs">
+                      <span className="shrink-0 bg-primary px-2.5 py-1.5 font-semibold tracking-[0.14em] text-white uppercase">
+                        Aplicação
+                      </span>
+                      <span className="font-semibold tracking-wide text-primary">
+                        {service.application}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-3 text-[0.65rem] sm:text-xs">
+                      <span className="shrink-0 bg-primary px-2.5 py-1.5 font-semibold tracking-[0.14em] text-white uppercase">
+                        Manutenção
+                      </span>
+                      <span className="font-semibold tracking-wide text-primary">
+                        {service.maintenance}
+                      </span>
+                    </div>
+                  </div>
+
+                  <a
+                    href={whatsappUrl(siteConfig.messages[service.messageKey])}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex w-fit items-center gap-1.5 text-[0.7rem] font-medium text-primary transition-colors hover:text-primary-hover sm:mt-4 sm:text-sm"
+                  >
+                    <IconWhatsApp className="h-3.5 w-3.5 shrink-0" />
+                    Quero esse estilo
+                  </a>
+                </div>
+              </article>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   )

@@ -2,7 +2,6 @@ import { Care } from './components/Care'
 import { Cta } from './components/Cta'
 import { Faq } from './components/Faq'
 import { Footer } from './components/Footer'
-import { Gallery } from './components/Gallery'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { Highlights } from './components/Highlights'
@@ -20,7 +19,6 @@ function App() {
         <Hero />
         <Highlights />
         <Services />
-        <Gallery />
         <Techniques />
         <Process />
         <Care />

@@ -36,10 +36,10 @@ export function Hero() {
                 Agendar pelo WhatsApp
               </a>
               <a
-                href="#inspiracoes"
+                href="#tecnicas"
                 className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-border bg-white/70 px-5 text-sm font-medium text-ink/80 transition-colors hover:border-primary/30 hover:text-primary sm:w-auto"
               >
-                Ver inspirações
+                Ver técnicas
               </a>
             </div>
 

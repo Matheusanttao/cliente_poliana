@@ -32,21 +32,6 @@ export const siteConfig = {
       src: heroOverlay,
       model: 'Modelo',
     },
-    gallery: [
-      { src: gallery1, model: 'Volume Fox', price: 'R$ 100,00', messageKey: 'fox' as const },
-      {
-        src: gallery2,
-        model: 'Volume Boss Girl',
-        price: 'R$ 100,00',
-        messageKey: 'volumeBossGirl' as const,
-      },
-      {
-        src: gallery3,
-        model: 'Volume Brasileiro',
-        price: 'R$ 90,00',
-        messageKey: 'volumeBrasileiro' as const,
-      },
-    ],
     spoolies: {
       src: spooliesImage,
       model: 'Modelo',
@@ -67,35 +52,41 @@ export const siteConfig = {
     {
       id: 'fox',
       name: 'Fox',
+      image: gallery1,
+      imagePosition: 'object-[center_42%]',
       application: 'R$ 100,00',
       maintenance: 'Consulte',
       messageKey: 'fox' as const,
       effect: 'Alongado e marcante',
       bestFor: 'Quem busca alongar o olhar com efeito felino.',
       details:
-        'Mais comprimento nas pontas externas, abrindo e alongando o olhar com elegância.',
+        'Mais comprimento nas pontas externas, abrindo e alongando o olhar com elegância. Ideal para quem busca efeito felino.',
     },
     {
       id: 'volume-boss-girl',
       name: 'Volume Boss Girl',
+      image: gallery2,
+      imagePosition: 'object-[center_38%]',
       application: 'R$ 100,00',
       maintenance: 'Consulte',
       messageKey: 'volumeBossGirl' as const,
       effect: 'Volume intenso',
       bestFor: 'Quem gosta de cílios cheios e com presença.',
       details:
-        'Leques densos para um resultado poderoso, dramático e bem definido.',
+        'Leques densos para um resultado poderoso, dramático e bem definido. Ideal para quem gosta de cílios com presença.',
     },
     {
       id: 'volume-brasileiro',
       name: 'Volume Brasileiro',
+      image: gallery3,
+      imagePosition: 'object-[center_45%]',
       application: 'R$ 90,00',
       maintenance: 'Consulte',
       messageKey: 'volumeBrasileiro' as const,
       effect: 'Volume suave',
       bestFor: 'Quem prefere um visual cheio com naturalidade.',
       details:
-        'Volume equilibrado, com acabamento delicado e efeito sofisticado no dia a dia.',
+        'Volume equilibrado e versátil, com acabamento delicado e efeito sofisticado no dia a dia.',
     },
   ],
   /** Adicione depoimentos reais aqui. Enquanto vazio, a seção de convite aparece. */
@@ -146,7 +137,6 @@ export const siteConfig = {
   ],
   nav: [
     { label: 'Serviços', href: '#servicos' },
-    { label: 'Inspirações', href: '#inspiracoes' },
     { label: 'Técnicas', href: '#tecnicas' },
   ],
 } as const
