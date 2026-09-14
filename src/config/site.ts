@@ -148,7 +148,6 @@ export const siteConfig = {
     { label: 'Serviços', href: '#servicos' },
     { label: 'Inspirações', href: '#inspiracoes' },
     { label: 'Técnicas', href: '#tecnicas' },
-    { label: 'Valores', href: '#valores' },
   ],
 } as const
 

@@ -6,7 +6,6 @@ import { Gallery } from './components/Gallery'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { Highlights } from './components/Highlights'
-import { Pricing } from './components/Pricing'
 import { Process } from './components/Process'
 import { Services } from './components/Services'
 import { Techniques } from './components/Techniques'
@@ -24,7 +23,6 @@ function App() {
         <Gallery />
         <Techniques />
         <Process />
-        <Pricing />
         <Care />
         <Testimonials />
         <Faq />
