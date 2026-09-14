@@ -33,12 +33,12 @@ export function Testimonials() {
                 Seu resultado também pode inspirar outras pessoas.
               </p>
               <p className="mt-3 text-sm leading-relaxed text-ink/65 sm:text-base">
-                Assim que houver depoimentos reais, eles aparecem aqui. Por enquanto, fale com a Poliana e compartilhe sua experiência pelo WhatsApp.
+                Assim que houver depoimentos reais, eles aparecem aqui. Por enquanto, fale com a Design Aganete e compartilhe sua experiência pelo WhatsApp.
               </p>
             </div>
             <a
               href={whatsappUrl(
-                'Olá, Poliana! Fiz o procedimento e gostaria de compartilhar meu feedback.',
+                'Olá, Design Aganete! Fiz o procedimento e gostaria de compartilhar meu feedback.',
               )}
               target="_blank"
               rel="noopener noreferrer"

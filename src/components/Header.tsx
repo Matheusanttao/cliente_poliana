@@ -27,10 +27,10 @@ export function Header() {
     <header className="relative z-50 bg-background">
       <div className="container-site flex min-w-0 items-center justify-between gap-3 py-4 sm:gap-4 sm:py-5 lg:py-6">
         <a href="#topo" className="group min-w-0 shrink text-left leading-none sm:text-center" onClick={close}>
-          <span className="font-serif text-[1.35rem] font-medium tracking-[0.14em] text-primary sm:text-[1.75rem] sm:tracking-[0.22em]">
+          <span className="font-serif text-[1.05rem] font-medium tracking-[0.08em] text-primary sm:text-[1.45rem] sm:tracking-[0.14em]">
             {siteConfig.brand.title}
           </span>
-          <span className="mt-1 block text-[0.5rem] tracking-[0.28em] text-primary/80 sm:mt-1.5 sm:text-[0.55rem] sm:tracking-[0.42em]">
+          <span className="mt-1 block text-[0.5rem] tracking-[0.22em] text-primary/80 sm:mt-1.5 sm:text-[0.55rem] sm:tracking-[0.36em]">
             {siteConfig.brand.subtitle}
           </span>
         </a>

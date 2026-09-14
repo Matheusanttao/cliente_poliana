@@ -11,7 +11,7 @@ const steps = [
   {
     number: '02',
     title: 'Reserve seu horário',
-    text: 'A Poliana confirma a disponibilidade e organiza o atendimento com hora marcada.',
+    text: 'A Design Aganete confirma a disponibilidade e organiza o atendimento com hora marcada.',
     Icon: IconCheck,
   },
   {

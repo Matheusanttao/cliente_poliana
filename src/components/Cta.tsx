@@ -23,7 +23,7 @@ export function Cta() {
               Vamos escolher seu próximo olhar?
             </h2>
             <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-white/85 sm:text-base">
-              Fale com a Poliana no WhatsApp e receba orientação para o estilo que mais valoriza o seu olhar.
+              Fale com a Design Aganete no WhatsApp e receba orientação para o estilo que mais valoriza o seu olhar.
             </p>
 
             <a
@@ -33,7 +33,7 @@ export function Cta() {
               className="btn-secondary mt-8 inline-flex gap-2"
             >
               <IconWhatsApp className="h-5 w-5" />
-              Conversar com a Poliana
+              Conversar com a Design Aganete
             </a>
           </div>
         </div>

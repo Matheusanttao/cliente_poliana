@@ -7,8 +7,8 @@ import spooliesImage from '../assets/images/escovinhas-rosas.jpg'
 
 export const siteConfig = {
   brand: {
-    name: 'Poliana',
-    title: 'POLIANA',
+    name: 'Design Aganete',
+    title: 'DESIGN AGANETE',
     subtitle: 'LASH & BEAUTY',
   },
   whatsapp: {
@@ -20,7 +20,7 @@ export const siteConfig = {
     neighborhood: 'Bairro Mangueiras',
     full: 'Rua Romeiro Gomes Viera, 27 — Bairro Mangueiras',
   },
-  /** Ex.: '@poliana.lash' — deixe vazio para ocultar na interface. */
+  /** Ex.: '@design.aganete' — deixe vazio para ocultar na interface. */
   instagram: '',
   appointmentNote: 'Atendimento com hora marcada',
   images: {
@@ -39,14 +39,14 @@ export const siteConfig = {
   },
   messages: {
     general:
-      'Olá, Poliana! Vim pelo site e gostaria de agendar um horário. Pode me informar a disponibilidade?',
-    fox: 'Olá, Poliana! Vim pelo site e tenho interesse no Fox de R$ 100,00. Quais horários estão disponíveis?',
+      'Olá, Design Aganete! Vim pelo site e gostaria de agendar um horário. Pode me informar a disponibilidade?',
+    fox: 'Olá, Design Aganete! Vim pelo site e tenho interesse no Fox de R$ 100,00. Quais horários estão disponíveis?',
     volumeBossGirl:
-      'Olá, Poliana! Vim pelo site e tenho interesse no Volume Boss Girl de R$ 100,00. Quais horários estão disponíveis?',
+      'Olá, Design Aganete! Vim pelo site e tenho interesse no Volume Boss Girl de R$ 100,00. Quais horários estão disponíveis?',
     volumeBrasileiro:
-      'Olá, Poliana! Vim pelo site e tenho interesse no Volume Brasileiro de R$ 90,00. Quais horários estão disponíveis?',
+      'Olá, Design Aganete! Vim pelo site e tenho interesse no Volume Brasileiro de R$ 90,00. Quais horários estão disponíveis?',
     doubt:
-      'Olá, Poliana! Vim pelo site e gostaria de tirar uma dúvida sobre os serviços de cílios.',
+      'Olá, Design Aganete! Vim pelo site e gostaria de tirar uma dúvida sobre os serviços de cílios.',
   },
   lashServices: [
     {
@@ -55,7 +55,7 @@ export const siteConfig = {
       image: gallery1,
       imagePosition: 'object-[center_42%]',
       application: 'R$ 100,00',
-      maintenance: 'Consulte',
+      maintenance: 'R$ 85,00',
       messageKey: 'fox' as const,
       effect: 'Alongado e marcante',
       bestFor: 'Quem busca alongar o olhar com efeito felino.',
@@ -68,7 +68,7 @@ export const siteConfig = {
       image: gallery2,
       imagePosition: 'object-[center_38%]',
       application: 'R$ 100,00',
-      maintenance: 'Consulte',
+      maintenance: 'R$ 85,00',
       messageKey: 'volumeBossGirl' as const,
       effect: 'Volume intenso',
       bestFor: 'Quem gosta de cílios cheios e com presença.',
@@ -81,7 +81,7 @@ export const siteConfig = {
       image: gallery3,
       imagePosition: 'object-[center_45%]',
       application: 'R$ 90,00',
-      maintenance: 'Consulte',
+      maintenance: 'R$ 85,00',
       messageKey: 'volumeBrasileiro' as const,
       effect: 'Volume suave',
       bestFor: 'Quem prefere um visual cheio com naturalidade.',
@@ -107,12 +107,12 @@ export const siteConfig = {
     {
       question: 'Qual técnica combina comigo?',
       answer:
-        'A escolha depende do efeito que você deseja. Converse com a Poliana para avaliar as opções e o formato do seu olhar.',
+        'A escolha depende do efeito que você deseja. Converse com a Design Aganete para avaliar as opções e o formato do seu olhar.',
     },
     {
       question: 'Como funciona a manutenção?',
       answer:
-        'O prazo e o valor variam conforme a técnica e as condições dos fios. Consulte a Poliana para receber a orientação adequada.',
+        'O prazo e o valor variam conforme a técnica e as condições dos fios. Consulte a Design Aganete para receber a orientação adequada.',
     },
     {
       question: 'Como reservar meu horário?',
@@ -122,7 +122,7 @@ export const siteConfig = {
     {
       question: 'O procedimento dói?',
       answer:
-        'Em geral é confortável. A Poliana trabalha com delicadeza e orienta você durante todo o atendimento.',
+        'Em geral é confortável. A Design Aganete trabalha com delicadeza e orienta você durante todo o atendimento.',
     },
     {
       question: 'Posso usar maquiagem depois?',
@@ -132,7 +132,7 @@ export const siteConfig = {
     {
       question: 'Quanto tempo dura o efeito?',
       answer:
-        'A duração varia conforme a técnica, os cuidados e o ciclo natural dos fios. A Poliana indica a melhor rotina de manutenção para o seu caso.',
+        'A duração varia conforme a técnica, os cuidados e o ciclo natural dos fios. A Design Aganete indica a melhor rotina de manutenção para o seu caso.',
     },
   ],
   nav: [

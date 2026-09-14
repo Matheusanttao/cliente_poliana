@@ -10,8 +10,8 @@ export function Footer() {
       <div className="container-site">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr]">
           <div className="sm:col-span-2 lg:col-span-1">
-            <p className="font-serif text-2xl tracking-[0.18em] text-primary">{siteConfig.brand.title}</p>
-            <p className="mt-1.5 text-[0.55rem] tracking-[0.42em] text-primary/80">
+            <p className="font-serif text-2xl tracking-[0.1em] text-primary">{siteConfig.brand.title}</p>
+            <p className="mt-1.5 text-[0.55rem] tracking-[0.36em] text-primary/80">
               {siteConfig.brand.subtitle}
             </p>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-ink/65">
@@ -81,7 +81,7 @@ export function Footer() {
 
         <div className="mt-10 border-t border-border/70 pt-6 text-center text-sm leading-relaxed text-ink/55">
           <p>
-            © {year} Poliana Lash. Desenvolvido por{' '}
+            © {year} Design Aganete. Desenvolvido por{' '}
             <a
               href="https://matheusantao.com.br"
               target="_blank"
