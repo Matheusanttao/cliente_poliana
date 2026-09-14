@@ -1,4 +1,4 @@
-import heroImage from '../assets/images/hero-poliana.jpg'
+import heroImage from '../assets/images/hero-principal.jpg'
 import heroOverlay from '../assets/images/hero-overlay-olho.jpg'
 import gallery1 from '../assets/images/galeria-01.jpg'
 import gallery2 from '../assets/images/galeria-02.jpg'
