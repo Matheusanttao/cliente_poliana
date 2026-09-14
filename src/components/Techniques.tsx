@@ -15,11 +15,11 @@ export function Techniques() {
           </p>
         </div>
 
-        <ul className="mx-auto mt-10 flex max-w-3xl flex-col gap-8 sm:gap-10">
+        <ul className="mx-auto mt-10 flex max-w-3xl flex-col gap-8 lg:max-w-none lg:grid lg:grid-cols-3 lg:gap-6">
           {siteConfig.lashServices.map((service) => (
             <li key={service.id}>
-              <article className="grid grid-cols-[minmax(7.5rem,38%)_1fr] items-start gap-3 sm:grid-cols-[minmax(11rem,34%)_1fr] sm:gap-6">
-                <div className="overflow-hidden rounded-sm bg-surface shadow-[var(--shadow-soft)]">
+              <article className="grid grid-cols-[minmax(7.5rem,38%)_1fr] items-start gap-3 sm:gap-5 lg:flex lg:flex-col lg:gap-4">
+                <div className="overflow-hidden rounded-sm bg-surface shadow-[var(--shadow-soft)] lg:rounded-md">
                   <img
                     src={service.image}
                     alt={`${service.name} — resultado de extensão de cílios`}
@@ -30,15 +30,15 @@ export function Techniques() {
                   />
                 </div>
 
-                <div className="flex min-w-0 flex-col">
-                  <h3 className="font-serif text-[1.05rem] leading-tight font-medium tracking-[0.04em] text-ink uppercase sm:text-2xl sm:tracking-[0.06em]">
+                <div className="flex min-w-0 flex-col lg:flex-1">
+                  <h3 className="font-serif text-[1.05rem] leading-tight font-medium tracking-[0.04em] text-ink uppercase sm:text-xl lg:text-[1.35rem] lg:tracking-[0.05em]">
                     {service.name}
                   </h3>
-                  <p className="mt-2 text-[0.72rem] leading-relaxed text-ink/65 sm:mt-3 sm:text-sm">
+                  <p className="mt-2 text-[0.72rem] leading-relaxed text-ink/65 sm:text-sm lg:mt-2.5 lg:min-h-[4.5rem]">
                     {service.details}
                   </p>
 
-                  <div className="mt-3 flex w-full max-w-[16rem] flex-col gap-1.5 sm:mt-4 sm:max-w-[18rem] sm:gap-2">
+                  <div className="mt-3 flex w-full max-w-[16rem] flex-col gap-1.5 sm:max-w-[18rem] sm:gap-2 lg:mt-4 lg:max-w-none">
                     <div className="flex items-center gap-3 text-[0.65rem] sm:text-xs">
                       <span className="shrink-0 bg-primary px-2.5 py-1.5 font-semibold tracking-[0.14em] text-white uppercase">
                         Aplicação
