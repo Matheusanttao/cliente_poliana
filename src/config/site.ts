@@ -33,9 +33,19 @@ export const siteConfig = {
       model: 'Modelo',
     },
     gallery: [
-      { src: gallery1, model: 'Volume Fox' },
-      { src: gallery2, model: 'Volume Boss gril' },
-      { src: gallery3, model: 'Volume Brasileiro' },
+      { src: gallery1, model: 'Volume Fox', price: 'R$ 100,00', messageKey: 'fox' as const },
+      {
+        src: gallery2,
+        model: 'Volume Boss Girl',
+        price: 'R$ 100,00',
+        messageKey: 'volumeBossGirl' as const,
+      },
+      {
+        src: gallery3,
+        model: 'Volume Brasileiro',
+        price: 'R$ 90,00',
+        messageKey: 'volumeBrasileiro' as const,
+      },
     ],
     spoolies: {
       src: spooliesImage,

@@ -52,12 +52,12 @@ export function Gallery() {
           </a>
         </div>
 
-        <ul className="mt-10 grid gap-5 sm:grid-cols-3">
+        <ul className="mt-10 grid gap-6 sm:grid-cols-3 sm:gap-5">
           {siteConfig.images.gallery.map((item, index) => (
-            <li key={item.src}>
+            <li key={item.src} className="group">
               <button
                 type="button"
-                className="group relative block w-full overflow-hidden rounded-[1.35rem] shadow-[var(--shadow-card)] focus-visible:outline-offset-4"
+                className="block w-full overflow-hidden rounded-[1.35rem] shadow-[var(--shadow-card)] focus-visible:outline-offset-4"
                 onClick={() => setActive(index)}
                 aria-label={`Ampliar foto de ${item.model}`}
               >
@@ -69,13 +69,14 @@ export function Gallery() {
                   width={740}
                   height={1200}
                 />
-                <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/65 to-transparent px-4 pt-12 pb-4 text-left">
-                  <span className="block font-serif text-lg text-white">{item.model}</span>
-                  <span className="mt-0.5 block text-xs text-white/80 sm:opacity-0 sm:transition-opacity sm:duration-300 sm:group-hover:opacity-100">
-                    Toque para ampliar
-                  </span>
-                </span>
               </button>
+              <div className="mt-3 px-0.5 text-left">
+                <p className="font-serif text-lg leading-snug text-ink sm:text-xl">{item.model}</p>
+                <p className="mt-0.5 text-sm font-medium text-primary">{item.price}</p>
+                <p className="mt-1 text-xs text-ink/45 transition-colors group-hover:text-ink/60">
+                  Toque para ampliar
+                </p>
+              </div>
             </li>
           ))}
         </ul>
@@ -93,14 +94,17 @@ export function Gallery() {
             className="relative max-h-[90vh] w-full max-w-lg overflow-hidden rounded-2xl bg-background shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between border-b border-border px-4 py-3">
-              <h3 id={titleId} className="font-serif text-lg">
-                {activeItem.model}
-              </h3>
+            <div className="flex items-start justify-between gap-3 border-b border-border px-4 py-3">
+              <div>
+                <h3 id={titleId} className="font-serif text-lg leading-tight">
+                  {activeItem.model}
+                </h3>
+                <p className="mt-0.5 text-sm font-medium text-primary">{activeItem.price}</p>
+              </div>
               <button
                 ref={closeRef}
                 type="button"
-                className="inline-flex min-h-10 min-w-10 items-center justify-center rounded-full text-ink hover:bg-surface"
+                className="inline-flex min-h-10 min-w-10 shrink-0 items-center justify-center rounded-full text-ink hover:bg-surface"
                 aria-label="Fechar"
                 onClick={() => setActive(null)}
               >
@@ -110,8 +114,18 @@ export function Gallery() {
             <img
               src={activeItem.src}
               alt={`Inspiração de olhar — ${activeItem.model}`}
-              className={`max-h-[80vh] w-full object-contain ${galleryPositions[active]}`}
+              className={`max-h-[70vh] w-full object-contain ${galleryPositions[active]}`}
             />
+            <div className="border-t border-border px-4 py-3">
+              <a
+                href={whatsappUrl(siteConfig.messages[activeItem.messageKey])}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary inline-flex w-full justify-center"
+              >
+                Quero esse estilo
+              </a>
+            </div>
           </div>
         </div>
       )}
