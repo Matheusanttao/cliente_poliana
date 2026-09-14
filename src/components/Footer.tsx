@@ -75,10 +75,16 @@ export function Footer() {
               Dúvidas
             </a>
           </nav>
-          <p className="mt-8 text-sm text-ink/55">
-            © {year} {siteConfig.brand.name} — Lash & Beauty.
-            <br />
-            Todos os direitos reservados.
+          <p className="mt-8 text-sm leading-relaxed text-ink/55">
+            © {year} Poliana Lash Desenvolvido por{' '}
+            <a
+              href="https://matheusantao.com.br"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-primary underline underline-offset-2 transition-colors hover:text-primary-hover"
+            >
+              Matheus Antão
+            </a>
           </p>
         </div>
       </div>
