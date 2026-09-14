@@ -1,5 +1,4 @@
 import { Care } from './components/Care'
-import { Contact } from './components/Contact'
 import { Cta } from './components/Cta'
 import { Faq } from './components/Faq'
 import { Footer } from './components/Footer'
@@ -22,14 +21,13 @@ function App() {
         <Hero />
         <Highlights />
         <Services />
+        <Gallery />
         <Techniques />
         <Process />
-        <Gallery />
         <Pricing />
         <Care />
         <Testimonials />
         <Faq />
-        <Contact />
         <Cta />
       </main>
       <Footer />

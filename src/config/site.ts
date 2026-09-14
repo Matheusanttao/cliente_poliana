@@ -146,10 +146,9 @@ export const siteConfig = {
   ],
   nav: [
     { label: 'Serviços', href: '#servicos' },
-    { label: 'Técnicas', href: '#tecnicas' },
     { label: 'Inspirações', href: '#inspiracoes' },
+    { label: 'Técnicas', href: '#tecnicas' },
     { label: 'Valores', href: '#valores' },
-    { label: 'Contato', href: '#contato' },
   ],
 } as const
 
