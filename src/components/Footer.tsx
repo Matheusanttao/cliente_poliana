@@ -6,7 +6,7 @@ export function Footer() {
   const ig = instagramUrl()
 
   return (
-    <footer className="overflow-x-clip border-t border-border bg-surface/70 pt-12 pb-28 sm:pt-14 sm:pb-28">
+    <footer className="overflow-x-clip border-t border-border bg-surface/70 pt-12 pb-8 sm:pt-14 sm:pb-10">
       <div className="container-site">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr]">
           <div className="sm:col-span-2 lg:col-span-1">
@@ -79,7 +79,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-border/70 pt-6 text-sm leading-relaxed text-ink/55">
+        <div className="mt-10 border-t border-border/70 pt-6 text-center text-sm leading-relaxed text-ink/55">
           <p>
             © {year} Poliana Lash. Desenvolvido por{' '}
             <a
