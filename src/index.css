@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #fdf8f7;
+  --color-surface: #f5e8e6;
+  --color-primary: #9c5a67;
+  --color-primary-hover: #854a56;
+  --color-ink: #2c2628;
+  --color-border: #ead9dc;
+  --color-muted: #6f6166;
+  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: Inter, system-ui, sans-serif;
+  --font-script: "Great Vibes", cursive;
+  --shadow-soft: 0 12px 40px rgba(40, 36, 40, 0.08);
+  --shadow-card: 0 10px 30px rgba(155, 78, 101, 0.16);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    @apply bg-background font-sans text-ink antialiased;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 0% -10%, rgba(156, 90, 103, 0.07), transparent),
+      radial-gradient(ellipse 60% 40% at 100% 20%, rgba(245, 232, 230, 0.9), transparent);
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary;
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-[1180px] px-5 sm:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex min-h-12 items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium tracking-wide text-white transition-colors duration-200 hover:bg-primary-hover;
+  }
+
+  .btn-secondary {
+    @apply inline-flex min-h-12 items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-medium tracking-wide text-primary transition-colors duration-200 hover:bg-surface;
+  }
+
+  .section-title {
+    @apply font-serif text-3xl leading-tight font-medium text-ink sm:text-4xl lg:text-[2.85rem];
+  }
+
+  .eyebrow {
+    @apply text-[0.65rem] font-medium tracking-[0.28em] text-primary uppercase;
+  }
+
+  .font-script {
+    font-family: var(--font-script);
+  }
+
+  .section-band {
+    @apply relative bg-surface/55;
+  }
+
+  .section-band::before {
+    content: "";
+    @apply pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent;
+  }
+}
